@@ -1,0 +1,39 @@
+_G.CONFIGURATION = {
+    minRiftLuck = 2,
+    enableOptimization = false,
+    equipBestPets = true,
+    autoEnchant = true,
+
+    riftEgg = { -- ["EggName"] = priority
+        ["Rainbow Egg"] = 8,
+        ["Nightmare Egg"] = 9,
+        ["Aura Egg"] = 999,
+        ["Void Egg"] = 7,
+        ["Event 1"] = 101, -- Bunny Egg
+        ["Event 2"] = 100, -- Pastel Egg
+        ["Event 3"] = 103 -- Throwback Egg
+    },
+
+    riftChest = {
+        golden = {
+            farming = true,
+            minKeysToFarm = 15 
+        },
+        royal = {
+            farming = true,
+            minKeysToFarm = 5 
+        }
+    },
+
+    webhook = {
+        userId = "", -- Discord User ID
+        webhookUrl = "", -- webhook
+        rarityToSend = {
+            "Legendary",
+            "Mythic",
+            "Secret"
+        }
+    }
+}
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3c4ab478c7ace15ad975e2f7f0db853f.lua"))()
